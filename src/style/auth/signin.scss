@@ -7,6 +7,7 @@
     grid-template-rows:
       [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px)
       [line-s] 2px [line-e login-s] 38px [login-e];
+    grid-template-columns: 1fr;
   }
 
   &__page-title {
@@ -14,6 +15,9 @@
 }
 
 .sign-in-form {
+  & > * {
+    grid-column: 1/-1;
+  }
   &__email {
     grid-row: email-s/email-e;
   }
@@ -28,5 +32,11 @@
   &__login {
     grid-row: login-s/login-e;
     margin-top: 39px;
+  }
+  &__details {
+    grid-row: 1/-1;
+
+    justify-self: end;
+    align-self: start;
   }
 }
