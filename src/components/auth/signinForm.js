@@ -38,6 +38,7 @@ class SignInForm extends Component {
         <Field
           className="sign-in-form__password"
           type="password"
+          autoComplete="current-password"
           title="Password"
           placeholder="Password"
           name="password"
@@ -46,7 +47,7 @@ class SignInForm extends Component {
         <div className="sign-in-form__line"></div>
         <Field
           className="sign-in-form__login"
-          onClick={() => console.log("tryba submit")}
+          onClick={() => history.push("/account")}
           type="submit"
           title="Login"
           name="login"

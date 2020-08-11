@@ -8,21 +8,18 @@ import history from "../../history";
 class SignUpForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
-    const links = [
+    const info = [
       {
         _id: 0,
-        title: "Not Registered? Create account here",
-        onClick: () => history.push("/signup"),
+        title: "At least 6 characters",
       },
       {
         _id: 1,
-        title: "Forgot account email?",
-        onClick: () => console.log("forgot email"),
+        title: "At least on number",
       },
       {
         _id: 2,
-        title: "Forgot password?",
-        onClick: () => console.log("forgot password"),
+        title: "At least one symbol",
       },
     ];
     return (
@@ -46,13 +43,14 @@ class SignUpForm extends Component {
         <Field
           className="sign-up-form__password"
           type="password"
+          autoComplete="new-password"
           title="Password"
           placeholder="Password"
           name="password"
           component={FormInput}
         />
         <Field
-          className="sign-up-form__confirm-password"
+          className="sign-up-form__confirm"
           type="password"
           title="Confirm Password"
           placeholder="Confirm Password"
@@ -63,15 +61,15 @@ class SignUpForm extends Component {
         <div className="sign-up-form__line"></div>
         <Field
           className="sign-up-form__login"
-          onClick={() => console.log("tryna submit")}
+          onClick={() => history.push("/account")}
           type="submit"
-          title="Login"
+          title="Create Account"
           name="login"
           component={FormButton}
         />
         <Field
           className="sign-up-form__back"
-          onClick={() => console.log("tryba go back")}
+          onClick={() => history.push("/signin")}
           type="button"
           title="Back"
           name="back"
@@ -80,8 +78,8 @@ class SignUpForm extends Component {
         />
         <Details
           className="sign-up-form__details"
-          title="QuickLinks"
-          links={links}
+          title="Password Requirements"
+          links={info}
         />
       </form>
     );
