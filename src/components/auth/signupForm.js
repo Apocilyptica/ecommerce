@@ -15,7 +15,7 @@ class SignUpForm extends Component {
       },
       {
         _id: 1,
-        title: "At least on number",
+        title: "At least one number",
       },
       {
         _id: 2,
@@ -79,7 +79,7 @@ class SignUpForm extends Component {
         <Details
           className="sign-up-form__details"
           title="Password Requirements"
-          links={info}
+          info={info}
         />
       </form>
     );
