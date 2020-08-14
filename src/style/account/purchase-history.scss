@@ -33,6 +33,7 @@
     grid-row: sm/m-s;
   }
   &__shipping-address {
+    white-space: pre-wrap;
     grid-column: s/m;
     grid-row: m-e/e;
   }
