@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import * as actions from "../../actions";
 import { connect } from "react-redux";
-import AccountInformation from "./accoutInformantion";
+import AccountInformation from "./accoutInformation";
 import PurchaseHistory from "./purchaseHistory";
 
 class Account extends Component {
@@ -27,7 +27,7 @@ class Account extends Component {
   renderContent() {
     let jsx;
     if (this.props.navbarLinks) {
-      this.props.navbarLinks.map((link) => {
+      this.props.navbarLinks.forEach((link) => {
         if (link.active) {
           jsx = link.component;
         }
@@ -45,6 +45,6 @@ function mapStateToProps(state) {
   return { headerLinks, navbarLinks };
 }
 
-Account = connect(mapStateToProps, null, actions)(Account);
+Account = connect(mapStateToProps, actions)(Account);
 
 export default Account;
