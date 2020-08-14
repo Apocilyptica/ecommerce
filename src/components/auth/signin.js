@@ -10,7 +10,7 @@ class SignIn extends Component {
     this.props.setNavbarLinks([]);
   }
   onSubmit = (fields) => {
-    this.props.history.push("/account");
+    console.log(fields);
   };
   render() {
     return (
