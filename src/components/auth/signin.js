@@ -11,6 +11,7 @@ class SignIn extends Component {
   }
   onSubmit = (fields) => {
     console.log(fields);
+    this.props.history.push("/account");
   };
   render() {
     return (
