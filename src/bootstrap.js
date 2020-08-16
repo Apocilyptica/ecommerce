@@ -20,6 +20,7 @@ const createStoreWithMiddleware = applyMiddleware()(
 );
 
 import "./style/main.scss";
+import Shop from "./components/shop/shop";
 
 function main() {
   ReactDOM.render(
@@ -32,6 +33,8 @@ function main() {
             <Route path="/signup" exact component={SignUp} />
 
             <Route path="/account" exact component={Account} />
+
+            <Route path="/shop" exact component={Shop} />
           </Switch>
         </Layout>
       </Router>
