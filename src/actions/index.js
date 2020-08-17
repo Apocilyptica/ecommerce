@@ -4,7 +4,11 @@ import {
   changeNavbarActive,
 } from "./headernavbar";
 
-import { fetchUserPurchases, setPuchaseDetail } from "./user";
+import {
+  fetchUserPurchases,
+  setPuchaseDetail,
+  fetchCartProducts,
+} from "./user";
 
 import {
   fetchShopCategories,
@@ -18,6 +22,7 @@ export {
   setNavbarLinks,
   changeNavbarActive,
   fetchUserPurchases,
+  fetchCartProducts,
   setPuchaseDetail,
   fetchShopCategories,
   fetchShopProducts,
