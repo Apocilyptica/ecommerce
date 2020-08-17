@@ -6,8 +6,8 @@ import {
 
 const INITIAL_STATE = {
   categories: [],
-  productsSelected: [],
   products: [],
+  filteredProducts: [],
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -17,6 +17,7 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         categories,
+        filteredProducts: [],
       };
 
     case SET_SHOP_PRODUCTS:
@@ -26,8 +27,15 @@ export default function (state = INITIAL_STATE, action) {
       };
 
     case FILTER_PRODUCTS_WITH_CATEGORY_ID:
+      var filteredProducts = [];
+      state.products.map((product) => {
+        if (product.belongsTo.includes(action.payload)) {
+          filteredProducts.push(product);
+        }
+      });
       return {
         ...state,
+        filteredProducts,
       };
 
     default:
