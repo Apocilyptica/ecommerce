@@ -7,8 +7,8 @@ class ShopProduct extends Component {
     const { _id, title, description, price } = this.props;
     return (
       <div className="shop-product">
-        <div className="shop-product_title">{title}</div>
-        <div className="shop-product_description">{description}</div>
+        <div className="shop-product__title">{title}</div>
+        <div className="shop-product__description">{description}</div>
         <GreenPriceTag className="shop-product_price" title={price} />
 
         <Quantity className="shop-product-quantity" quantity={1} />
