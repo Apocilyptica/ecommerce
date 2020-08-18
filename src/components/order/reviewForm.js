@@ -8,7 +8,7 @@ import ReviewProducts from "./reviewProducts";
 class ReviewForm extends Component {
   render() {
     const { className, handleSubmit, subtotal } = this.props;
-    let tax = 0.06;
+    let tax = Math.round((subtotal * 0.06 + Number.EPSILON) * 100) / 100;
 
     return (
       <form className={`${className} review-form`} onSubmit={handleSubmit}>
@@ -21,7 +21,7 @@ class ReviewForm extends Component {
         <div className="review-form__line"></div>
         <Field
           className="review-form__proceed"
-          onClick={() => history.push("/signin")}
+          onClick={() => history.push("/information/shipping")}
           type="submit"
           title="Proceed to Checkout"
           name="proceed"
@@ -43,7 +43,7 @@ class ReviewForm extends Component {
           </div>
           <div className="review-details__tax review-detail">
             <div className="review-detail__title">Tax</div>
-            <div className="review-detail__price">${tax * subtotal}</div>
+            <div className="review-detail__price">${tax}</div>
           </div>
           <div className="review-details__shipping review-detail">
             <div className="review-detail__title">Shipping</div>
