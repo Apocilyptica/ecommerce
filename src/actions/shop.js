@@ -66,6 +66,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 1,
@@ -74,6 +75,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 6],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 2,
@@ -82,6 +84,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 1, 4],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 3,
@@ -90,6 +93,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 2],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 4,
@@ -98,6 +102,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 5,
@@ -106,6 +111,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 2],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 6,
@@ -114,6 +120,7 @@ export function fetchShopProducts() {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: "1.99",
         belongsTo: [0, 6],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
     ],
   };
