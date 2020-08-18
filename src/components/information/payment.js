@@ -15,16 +15,17 @@ class Payment extends Component {
   };
   render() {
     return (
-      <div className="sign-in">
+      <div className="payment">
         <PageTitle
-          className="sign-in__page-title"
+          className="payment__page-title"
           title="Payment Information"
         />
-        <PaymentForm onSubmit={this.onSubmit} className="sign-in__form" />
+        <PaymentForm onSubmit={this.onSubmit} className="payment__form" />
       </div>
     );
   }
 }
 
 Payment = connect(null, actions)(Payment);
+
 export default Payment;
