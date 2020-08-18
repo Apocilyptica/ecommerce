@@ -13,6 +13,10 @@ html {
 body {
   color: #808080;
   font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -mox-osz-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @import "layout.scss";
