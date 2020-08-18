@@ -4,12 +4,16 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import { Router, Switch, Route } from "react-router-dom";
 
+import "./style/main.scss";
+
 import history from "./history";
 import Layout from "./components/layout";
 import SignIn from "./components/auth/signin";
 import SignUp from "./components/auth/signup";
 import Account from "./components/account/account";
 import reducers from "./reducers";
+import Shop from "./components/shop/shop";
+import Review from "./components/order/review";
 
 const createStoreWithMiddleware = applyMiddleware()(
   compose(
@@ -18,9 +22,6 @@ const createStoreWithMiddleware = applyMiddleware()(
       : (f) => f)(createStore)
   )
 );
-
-import "./style/main.scss";
-import Shop from "./components/shop/shop";
 
 function main() {
   ReactDOM.render(
@@ -35,6 +36,7 @@ function main() {
             <Route path="/account" exact component={Account} />
 
             <Route path="/shop" exact component={Shop} />
+            <Route path="/order/review" exact component={Review} />
           </Switch>
         </Layout>
       </Router>
